@@ -23,6 +23,13 @@ mkWindowsApp rec {
   nativeBuildInputs = [ copyDesktopItems copyDesktopIcons ];
   dontUnpack = true;
 
+  ## NOTE: I think `$HOME/.config/mobilesheets-companion` would make more sense
+  ## considering the name of this package, but the base names have to match
+  ## because of https://github.com/emmanuelrosa/erosanix/issues/14.
+  fileMap = {
+    "$HOME/.config/MobileSheetsProCompanion" = "drive_c/users/$USER/AppData/Roaming/MobileSheetsProCompanion";
+  };
+
   winAppInstall = ''
     $WINE ${src} /install /quiet
   '';
