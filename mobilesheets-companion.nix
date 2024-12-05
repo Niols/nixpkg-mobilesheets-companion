@@ -17,7 +17,7 @@ mkWindowsApp rec {
 
   src = fetchurl {
     url = "https://www.zubersoft.download/MobileSheetsProCompanion.exe";
-    sha256 = "16h4hah5r7rfpbn8vsys5v0pi8b0wibkzcgbca55i632qgha98bv";
+    sha256 = "1fbjhglfrafwyxa6b4gvbdmf1ghbxx1wqn5kd9dr0dsb55jxqsh6";
   };
 
   nativeBuildInputs = [ copyDesktopItems copyDesktopIcons ];
